@@ -5,49 +5,6 @@ Structure based on file type
 
 ![image](https://github.com/Ariel-r03/EcommerceFeria-FrontEnd/assets/66917994/61e05866-efef-4af8-8a75-6ce1df96225b)
 
-
-src/
-|-- components/
-|   |-- Avatar/
-|   |   |-- Avatar.jsx
-|   |   |-- Avatar.test.js
-|   |-- Button/
-|   |   |-- Button.jsx
-|   |   |-- Button.test.js
-|   |-- TextField/
-|   |   |-- TextField.jsx
-|   |   |-- TextField.test.js
-|-- contexts/
-|   |-- UserContext/
-|   |   |-- UserContext.js
-|-- hooks/
-|   |-- useMediaQuery/
-|   |   |-- useMediaQuery.js
-|-- pages/
-|   |-- UserProfile/
-|   |   |-- components/
-|   |   |   |-- SomeUserProfileComponent/
-|   |   |   |   |-- SomeUserProfileComponent.jsx
-|   |   |   |   |-- SomeUserProfileComponent.test.js
-|   |   |-- UserProfile.jsx
-|   |   |-- UserProfile.test.js
-|   |-- index.js
-|-- routes/
-|   |-- routes.jsx
-|   |-- routes.test.js
-|-- utilities/
-|   |-- some-util/
-|   |   |-- index.js
-|   |   |-- someUtil.js
-|   |   |-- index.test.js
-|-- services/
-|   |-- some-service/
-|   |   |-- index.js/
-|   |   |-- someService.js/
-|   |   |-- index.test.js
-|-- App.jsx
-|-- index.js
-
 Components: Dentro de la carpeta "Components" se colocaran componentes (JSX) que puedan ser reutilizados en diferentes partes del código, por ejemplo,
 una alerta, estas pueden ser utilizadas muchas veces asi que sería un componente que encajaria perfectamente en esta carpeta.
 

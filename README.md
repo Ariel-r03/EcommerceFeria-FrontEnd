@@ -3,6 +3,9 @@ FrontEnd code to the Ecommerce Proyect
 
 Structure based on file type
 
+![image](https://github.com/Ariel-r03/EcommerceFeria-FrontEnd/assets/66917994/61e05866-efef-4af8-8a75-6ce1df96225b)
+
+
 src/
 |-- components/
 |   |-- Avatar/

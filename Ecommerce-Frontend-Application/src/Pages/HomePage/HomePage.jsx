@@ -10,8 +10,8 @@ function HomePage() {
       <div className="bg-white">
         <HomePageNavBarComponent />
       </div>
-      <div className="sm:px-[9.85rem]"><HomePageHero /></div>
-      <div className="sm:px-[9.85rem]"><HomePageBenefitsInfo /></div>
+      <div className="sm:flex justify-center"><HomePageHero /></div>
+      <div className="sm:flex justify-center"><HomePageBenefitsInfo /></div>
       
      
     </div>

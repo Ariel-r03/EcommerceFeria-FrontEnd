@@ -3,8 +3,7 @@ import {benefits} from '../../../Constants'
 import {Cardbenefit}from '../HomePageComponents'
 function HomePageBenefitsInfo() {
   return (
-    <section className="bg-smoothSlate">
-      <div className='w-full sm:flex flex-row px-[2rem] py-[2rem]'>
+    <section className="bg-smoothSlate px-[3rem] sm:w-[80%] sm:flex flex-row sm:px-[4rem] py-[2rem] justify-center">
       {
         benefits.map((benefit)=>(
           <div className='mx-[1rem] my-[2rem]'>
@@ -12,7 +11,7 @@ function HomePageBenefitsInfo() {
           </div>
         ))
       }
-      </div>
+      
     
 
       

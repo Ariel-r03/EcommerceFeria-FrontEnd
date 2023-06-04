@@ -1,3 +1,17 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800;900&display=swap");
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.bg-black{
+    background-color: #1E1E1E;
+}
+
+.bg-smoothSlate{
+    background-color: #D9D9D9;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+  }

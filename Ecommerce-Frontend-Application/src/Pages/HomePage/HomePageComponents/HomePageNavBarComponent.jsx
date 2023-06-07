@@ -1,18 +1,12 @@
 import React, { useState } from "react";
 import { Logo, Menu, Close } from "../../../Assets";
 import { NavLinks, icons } from "../../../Constants";
-import { Searcher } from "../../../Components";
+
 function HomePageNavBarComponent() {
-  const [toggleSearcher, setToggleSearcher] = useState(false);
+  const [userDiv,setUserDiv]=useState(false)
   const [toggle, setToggle] = useState(false);
-  const [active, setActive] = useState(false);
-  const iconClick = (id) => {
-    if (id == "lupa") {
-      console.log("Lupaxd");
-      setToggleSearcher(true);
-      setActive(true);
-    }
-  };
+ 
+ 
   return (
     <section className="sm:w-[80%] sm:flex flex-col sm:px-[4rem]">
       <nav className="w-[100%] h-[5rem] flex flex-row">
@@ -41,17 +35,19 @@ function HomePageNavBarComponent() {
           {icons.map((icon) => (
             <img
               key={icon.id}
-              onClick={() => {
-                iconClick(icon.id);
-              }}
+             onClick={()=>{
+              if(icon.id === "usuario"){
+                setUserDiv(!userDiv);
+              }
+             }}
               className="mx-3 w-[28px] sm:w-[28px] h-[28px] hover:cursor-pointer"
               src={icon.icon}
               alt={icon.id}
             ></img>
           ))}
         </div>
-        <div className="absolute right-[27rem] top-[1.5rem] ">
-          {toggleSearcher ? <Searcher /> : ""}
+        <div className="bg-white border-2 rounded-xl absolute right-[15rem] top-[4rem] ">
+          {userDiv && <div className=" w-[250px] h-[50px] flex justify-center items-center"><span className="hover:cursor-pointer hover:text-slate-400">Iniciar sesión/Registrarse</span></div> }
         </div>
 
         <div
@@ -73,7 +69,6 @@ function HomePageNavBarComponent() {
         > 
           
           <ul className="list-none flex flex-col justify-end items-center flex-1">
-          <Searcher/>
             {NavLinks.map((link) => (
               <li
                 key={link.id}

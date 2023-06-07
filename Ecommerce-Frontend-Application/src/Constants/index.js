@@ -36,10 +36,6 @@ export const NavLinks = [
 
 export const icons = [
   {
-    id: "lupa",
-    icon: IconoLupa,
-  },
-  {
     id: "carritoCompras",
     icon: IconoCarritoCompras,
   },

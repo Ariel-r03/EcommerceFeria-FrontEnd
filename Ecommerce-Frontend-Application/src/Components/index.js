@@ -2,6 +2,7 @@ import Footer from './Footer'
 import SubscriptionForm from './SubscriptionForm'
 import Testimonials from './Testimonials'
 import Searcher from './Searcher'
+import TestimonialCard from './TestimonialCard'
 
 
 export{
@@ -9,4 +10,5 @@ export{
     SubscriptionForm,
     Testimonials,
     Searcher,
+    TestimonialCard,
 }

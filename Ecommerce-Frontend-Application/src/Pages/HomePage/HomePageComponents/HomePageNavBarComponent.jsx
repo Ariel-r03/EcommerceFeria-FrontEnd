@@ -5,30 +5,42 @@ import { Searcher } from "../../../Components";
 function HomePageNavBarComponent() {
   const [toggleSearcher, setToggleSearcher] = useState(false);
   const [toggle, setToggle] = useState(false);
+  const [active, setActive] = useState(false);
   const iconClick = (id) => {
     if (id == "lupa") {
       console.log("Lupaxd");
-      setToggleSearcher(!toggleSearcher);
+      setToggleSearcher(true);
+      setActive(true);
     }
   };
   return (
-    <section>
-      <nav className="w-full h-[5rem] flex flex-row sm:justify-between">
-        <div className="sm:ml-[10rem] flex ">
-          <img src={Logo} alt="LogoEmpresa" className=""/>
+    <section className="sm:w-[80%] sm:flex flex-col sm:px-[4rem]">
+      <nav className="w-[100%] h-[5rem] flex flex-row">
+        <div className="w-full flex">
+          <div className="flex items-center w-[80%] sm:w-[30%] ">
+            <img
+              className="ml-2 w-[150px] sm:w-[170px] h-[60px]"
+              src={Logo}
+              alt="LogoEmpresa"
+            />
+          </div>
+
+          <ul className="list-none sm:flex hidden flex-row items-center w-[70%] sm:ml-[1rem]">
+            {NavLinks.map((link) => (
+              <li
+                key={link.id}
+                className="text-[16px] mx-3 hover:cursor-pointer hover:text-slate-400"
+              >
+                {link.title}
+              </li>
+            ))}
+          </ul>
         </div>
 
-        <ul className="list-none sm:flex hidden flex-row items-center mr-[20rem]">
-          {NavLinks.map((link) => (
-            <li className="text-[16px] mx-3 hover:cursor-pointer hover:text-slate-400">
-              {link.title}
-            </li>
-          ))}
-        </ul>
-
-        <div className="flex flex-row items-center sm:mr-[255px]">
+        <div className="flex flex-row sm:justify-end items-center w-full">
           {icons.map((icon) => (
             <img
+              key={icon.id}
               onClick={() => {
                 iconClick(icon.id);
               }}
@@ -43,26 +55,30 @@ function HomePageNavBarComponent() {
         </div>
 
         <div
-          className="sm:hidden flex
-          justify-end items-center flex-1"
+          className="justify-end items-center w-[13%] mr-2 sm:hidden flex"
         >
           <img
             className="mr-2 w-[28px] h-[28px]
             object-contain"
             src={toggle ? Close : Menu}
             alt="Menu"
-            onClick={()=>setToggle(!toggle)}
+            onClick={() => setToggle(!toggle)}
           />
         </div>
 
         <div
           className={`${toggle ? "flex" : "hidden"}
-         p-6 bg-slate-900 absolute top-20 right-0
-         mx-4 my-2 min-w-[140px] rounded-xl sidebar`}
-        >
+         p-6 bg-white absolute top-20 right-0
+         mx-4 my-2 min-w-[140px] rounded-xl sidebar z-20`}
+        > 
+          
           <ul className="list-none flex flex-col justify-end items-center flex-1">
+          <Searcher/>
             {NavLinks.map((link) => (
-              <li className="text-[16px] text-white mx-3 hover:cursor-pointer hover:text-slate-400">
+              <li
+                key={link.id}
+                className="text-[16px] mx-3 my-1 hover:cursor-pointer hover:text-slate-400"
+              >
                 {link.title}
               </li>
             ))}

@@ -47,7 +47,7 @@ function HomePageNavBarComponent() {
           ))}
         </div>
         <div className="bg-white border-2 rounded-xl absolute right-[8rem] top-[4rem] sm:right-[15rem] sm:top-[4rem] ">
-          {userDiv && <div className="w-[170px] h-[35px] sm:w-[250px] sm:h-[50px] flex justify-center items-center"><span className="text-[12px] sm:text-[20px] hover:cursor-pointer hover:text-slate-400">Iniciar sesión/Registrarse</span></div> }
+          {userDiv && <div className="w-[170px] h-[35px] sm:w-[250px] sm:h-[50px] flex justify-center items-center"><span className="text-[12px] sm:text-[15px] hover:cursor-pointer hover:text-slate-400">Iniciar sesión/Registrarse</span></div> }
         </div>
 
         <div

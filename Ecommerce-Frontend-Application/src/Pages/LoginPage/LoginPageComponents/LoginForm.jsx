@@ -3,13 +3,13 @@ import { BannerImgAuthPage } from "../../../Assets";
 import { socialMedias } from "../../../Constants";
 function LoginForm() {
   return (
-    <section className="w-[80%] flex flex-col px-[3rem]  py-[2rem]  sm:w-[80%]">
-      <div className="flex flex-row justify-center items-center w-full shadow-md">
-        <div className="w-[60%]">
-          <img className="" src={BannerImgAuthPage} alt="" />
+    <section className="w-[80%] flex flex-col sm:px-[3rem]  sm:py-[2rem]  sm:w-[80%]">
+      <div className="relative sm:w-[100%] sm:flex flex-row justify-center items-center">
+        <div className="absolute h-full inset-0 sm:w-[60%] sm:static" >
+          <img src={BannerImgAuthPage} alt="" />
         </div>
-        <div className="w-[40%] h-auto">
-          <form className=" flex flex-col justify-center items-center" action="">
+        <div className="absolute inset-0 sm:w-[40%] sm:static sm:h-[100%]">
+          <form className="bg-white h-full flex flex-col justify-center items-center" action="">
             <h1 className="text-[30px] font-bold mt-[3rem] mb-[2rem]">
               Iniciar sesión
             </h1>
@@ -20,7 +20,7 @@ function LoginForm() {
             />
             <input
               placeholder="Contraseña"
-              className="border-2  w-[400px] h-[45px] my-5 px-2"
+              className="border-2  w-[400px] h-[45px] my-5 px-2 shadow-md"
               type="text"
             />
             <div className="flex flex-row w-[400px] justify-between my-5">

@@ -1,10 +1,12 @@
 import React, { useState } from "react";
 import { Logo, Menu, Close } from "../../../Assets";
 import { NavLinks, icons } from "../../../Constants";
+import { useNavigate } from 'react-router-dom';
 
 function HomePageNavBarComponent() {
   const [userDiv,setUserDiv]=useState(false)
   const [toggle, setToggle] = useState(false);
+  const navigate = useNavigate();
  
  
   return (
@@ -47,7 +49,9 @@ function HomePageNavBarComponent() {
           ))}
         </div>
         <div className="bg-white border-2 rounded-xl absolute right-[15rem] top-[4rem] ">
-          {userDiv && <div className=" w-[250px] h-[50px] flex justify-center items-center"><span className="hover:cursor-pointer hover:text-slate-400">Iniciar sesión/Registrarse</span></div> }
+          {userDiv && <div className=" w-[250px] h-[50px] flex justify-center items-center"><span onClick={()=>{
+            navigate("/login")
+          }} className="hover:cursor-pointer hover:text-slate-400">Iniciar sesión/Registrarse</span></div> }
         </div>
 
         <div

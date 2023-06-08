@@ -20,6 +20,7 @@ import SantiagoLopez from '../Assets/SantiagoLopez.svg'
 import IconFacebook from '../Assets/IconFacebook.svg'
 import IconInstagram from '../Assets/IconInstagram.svg'
 import IconTwitter from '../Assets/IconTwitter.svg'
+import BannerImgAuthPage from '../Assets/BannerImgAuthPage.svg'
 
 export {
 IconoCarritoCompras,
@@ -44,4 +45,5 @@ SantiagoLopez,
 IconFacebook,
 IconInstagram,
 IconTwitter,
+BannerImgAuthPage,
 };

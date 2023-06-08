@@ -1,5 +1,5 @@
 import HomePage from './HomePage/HomePage'
-import AuthPage from './AuthPage/AuthPage'
+import LoginPage from './LoginPage/LoginPage'
 
 export const pagesData=[
     {
@@ -8,8 +8,8 @@ export const pagesData=[
         title: "HomePage",
     },
     {
-        path: "/authpage",
-        element: <AuthPage/>,
-        title: "AuthPage",
+        path: "/login",
+        element: <LoginPage/>,
+        title: "Login",
     },
 ]

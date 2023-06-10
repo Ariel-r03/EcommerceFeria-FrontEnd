@@ -10,7 +10,7 @@ function HomePageHero() {
         una amplia selección de los últimos modelos de teléfonos móviles 
         de las principales marcas del mercado.</p>
       
-      <button className='rounded-xl bg-smoothSlate w-[100px] h-[20px] text-[10px] font-bold sm:my-5 sm:w-[200px] sm:h-[30px] sm:text-[15px]'>Ver Productos</button>
+      <button className='rounded-xl bg-smoothSlate w-[100px] h-[25px] text-[10px] font-bold sm:my-5 sm:w-[200px] sm:h-[40px] sm:text-[15px]'>Ver Productos</button>
     </div>
 
     </section>

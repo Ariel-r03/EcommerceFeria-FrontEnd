@@ -6,7 +6,7 @@ function HomePageBenefitsInfo() {
     <section className="bg-smoothSlate px-[3rem] sm:w-[80%] sm:flex flex-row sm:px-[4rem] py-[2rem] justify-center">
       {
         benefits.map((benefit)=>(
-          <div key={benefit.id} className='mx-[1rem] my-[2rem]'>
+          <div key={benefit.id} className='mx-[2rem] my-[2rem]'>
              <Cardbenefit benefit={benefit}/>
           </div>
         ))

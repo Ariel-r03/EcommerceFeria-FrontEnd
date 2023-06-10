@@ -15,9 +15,10 @@ function NavBarComponent({prop}) {
         <div className="w-full flex">
           <div className="flex items-center w-[80%] sm:w-[30%] ">
             <img
-              className="ml-2 w-[150px] sm:w-[170px] h-[60px]"
+              className="ml-2 w-[150px] sm:w-[170px] h-[60px] hover:cursor-pointer"
               src={Logo}
               alt="LogoEmpresa"
+              onClick={()=>navigate("/")}
             />
           </div>
 
@@ -67,7 +68,7 @@ function NavBarComponent({prop}) {
         <div
           className={`${toggle ? "flex" : "hidden"}
          p-6 bg-white absolute top-20 right-0
-         mx-4 my-2 min-w-[140px] rounded-xl sidebar z-20`}
+         mx-4 my-2 min-w-[140px]  sidebar z-20 shadow-2xl`}
         > 
           
           <ul className="list-none flex flex-col justify-end items-center flex-1">

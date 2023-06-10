@@ -1,6 +1,6 @@
 import React from "react";
 import {
-  HomePageNavBarComponent,
+  NavBarComponent,
   HomePageHero,
   HomePageBenefitsInfo,
   HomePageBestProducts,
@@ -11,7 +11,7 @@ function HomePage() {
   return (
     <div className=" bg-black">
       <div className="bg-white sm:flex justify-center">
-        <HomePageNavBarComponent />
+        <NavBarComponent prop={""} />
       </div>
       <div className="sm:flex justify-center">
         <HomePageHero />

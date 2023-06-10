@@ -3,6 +3,7 @@ import SubscriptionForm from './SubscriptionForm'
 import Testimonials from './Testimonials'
 import Searcher from './Searcher'
 import TestimonialCard from './TestimonialCard'
+import NavBarComponent from './NavBarComponent'
 
 
 export{
@@ -11,4 +12,5 @@ export{
     Testimonials,
     Searcher,
     TestimonialCard,
+    NavBarComponent,
 }

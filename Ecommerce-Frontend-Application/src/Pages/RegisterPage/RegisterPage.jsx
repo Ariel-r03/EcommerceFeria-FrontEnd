@@ -4,8 +4,8 @@ import {RegisterForm} from './RegisterPageComponents'
 function RegisterPage() {
   return (
     <div>
-      <div><NavBarComponent/></div>
-      <div><RegisterForm/> </div>
+      <div className='sm:flex sm:h-auto justify-center'><NavBarComponent prop="hidden"/></div>
+      <div className='sm:flex sm:h-auto justify-center bg-smoothSlate h-[100%]'><RegisterForm/> </div>
     </div>
   )    
 }

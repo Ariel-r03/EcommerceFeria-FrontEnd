@@ -1,7 +1,10 @@
 import React from "react";
 import { BannerImgAuthPage, BackgroundLoginPage } from "../../../Assets";
 import { socialMedias } from "../../../Constants";
+import { useNavigate } from 'react-router-dom';
 function LoginForm() {
+
+  const navigate = useNavigate();
   return (
     <section className="h-[100%] flex justify-center items-center">
       <div className="relative sm:static flex justify-center items-center h-full w-full">
@@ -44,7 +47,7 @@ function LoginForm() {
           </button>
           <span className="text-[15px] text-[#767B97] mt-[2rem]">
             ¿No tienes cuenta aun? <br />
-            <span className="flex justify-center mb-[2rem] hover:cursor-pointer">
+            <span onClick={()=>navigate("/register")} className="flex justify-center mb-[2rem] hover:cursor-pointer">
               Regístrate aqui
             </span>
           </span>

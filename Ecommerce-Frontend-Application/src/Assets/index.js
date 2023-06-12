@@ -22,6 +22,7 @@ import IconInstagram from '../Assets/IconInstagram.svg'
 import IconTwitter from '../Assets/IconTwitter.svg'
 import BannerImgAuthPage from '../Assets/BannerImgAuthPage.svg'
 import BackgroundLoginPage from '../Assets/BackgroundLoginPage.svg'
+import IconAddProduct from '../Assets/IconAddProduct.svg'
 
 export {
 IconoCarritoCompras,
@@ -48,4 +49,5 @@ IconInstagram,
 IconTwitter,
 BannerImgAuthPage,
 BackgroundLoginPage,
+IconAddProduct,
 };

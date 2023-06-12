@@ -4,6 +4,7 @@ import Testimonials from './Testimonials'
 import Searcher from './Searcher'
 import TestimonialCard from './TestimonialCard'
 import NavBarComponent from './NavBarComponent'
+import CardProduct from './CardProduct'
 
 
 export{
@@ -13,4 +14,5 @@ export{
     Searcher,
     TestimonialCard,
     NavBarComponent,
+    CardProduct,
 }

@@ -102,6 +102,44 @@ export const starProducts = [
   },
 ];
 
+export const products = [
+  {
+    id: "iphone14promax",
+    title: "Iphone 14 pro max",
+    description:"Pantalla 120hz, desbloqueado de fabrica ,5g 256GB HDR, Zoom Optico, lorem ipsum , lorem impsun",
+    price: "1299.99",
+    icon: CelularDestacado1,
+  },
+  {
+    id: "samsungs20",
+    title: "Samsung S20",
+    description:"Pantalla 120hz, desbloqueado de fabrica ,5g 256GB HDR, Zoom Optico, lorem ipsum , lorem impsun",
+    price: "499.99",
+    icon: CelularDestacado2,
+  },
+  {
+    id: "pixel7pro",
+    title: "Pixel 7 pro",
+    description:"Pantalla 120hz, desbloqueado de fabrica ,5g 256GB HDR, Zoom Optico, lorem ipsum , lorem impsun",
+    price: "759.99",
+    icon: CelularDestacado3,
+  },
+  {
+    id: "samsungs21",
+    title: "Samsung S20",
+    description:"Pantalla 120hz, desbloqueado de fabrica ,5g 256GB HDR, Zoom Optico, lorem ipsum , lorem impsun",
+    price: "499.99",
+    icon: CelularDestacado2,
+  },
+  {
+    id: "pixel7pr0",
+    title: "Pixel 7 pro",
+    description:"Pantalla 120hz, desbloqueado de fabrica ,5g 256GB HDR, Zoom Optico, lorem ipsum , lorem impsun",
+    price: "759.99",
+    icon: CelularDestacado3,
+  },
+];
+
 export const testimonials = [
   {
     id: "sofiagarcia",

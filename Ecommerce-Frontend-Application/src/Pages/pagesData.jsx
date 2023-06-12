@@ -1,7 +1,7 @@
 import HomePage from './HomePage/HomePage'
 import LoginPage from './LoginPage/LoginPage'
 import RegisterPage from './RegisterPage/RegisterPage'
-
+import ShopPage from './ShopPage/ShopPage'
 export const pagesData=[
     {
         path: "/",
@@ -17,5 +17,10 @@ export const pagesData=[
         path: "/register",
         element: <RegisterPage/>,
         title: "Register",
+    },
+    {
+        path: "/tienda",
+        element: <ShopPage/>,
+        title: "Tienda",
     },
 ]

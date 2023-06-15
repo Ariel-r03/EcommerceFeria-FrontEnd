@@ -1,5 +1,5 @@
 import React from 'react'
-import {LoginNavBar,LoginForm} from './LoginPageComponents'
+import {LoginForm} from './LoginPageComponents'
 import {NavBarComponent} from '../../Components'
 function LoginPage() {
   return (

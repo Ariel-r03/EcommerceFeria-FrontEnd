@@ -1,7 +1,20 @@
 import React from "react";
 import { BannerImgAuthPage, BackgroundLoginPage } from "../../../Assets";
 import { socialMedias } from "../../../Constants";
+import { useForm} from "react-hook-form"
+import {postRequest} from '../../../Services/Login'
 function LoginForm() {
+  const {
+    register,
+    handleSubmit,
+    watch,
+    formState: { errors },
+  } = useForm()
+
+  const onSubmit = async(data) => {
+    const response=await postRequest("http://ec2-54-226-200-205.compute-1.amazonaws.com/v1/auth/login",data);
+    console.log(response);
+  }
   return (
     <section className="h-[100%] flex justify-center items-center">
       <div className="relative sm:static flex justify-center items-center h-full w-full">
@@ -11,6 +24,7 @@ function LoginForm() {
         </div>
 
         <form
+          onSubmit={handleSubmit(onSubmit)}
           className="bg-white px-[3rem] flex flex-col  items-center absolute mx-0 my-0 self-center max-w-[360px] min-h-[700px]
           sm:static sm:max-w-[500px] sm:min-h-max sm:shadow-lg"
           action=""
@@ -22,11 +36,13 @@ function LoginForm() {
             placeholder="Usuario"
             className="border-2 w-[340px] h-[40px] my-3 sm:w-[400px] sm:h-[45px] sm:my-5 px-2 shadow-md"
             type="text"
+            {...register("username")}
           />
           <input
             placeholder="Contraseña"
             className="border-2 w-[340px] h-[40px] my-3 sm:w-[400px] sm:h-[45px] sm:my-5 px-2 shadow-md"
             type="password"
+            {...register("password")}
           />
           <div className="flex flex-row w-[340px] sm:w-[400px] justify-between my-5 sm:my-2.5">
             <div className="flex flex-row ">

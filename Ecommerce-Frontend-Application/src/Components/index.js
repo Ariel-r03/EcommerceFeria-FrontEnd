@@ -5,6 +5,7 @@ import Searcher from './Searcher'
 import TestimonialCard from './TestimonialCard'
 import NavBarComponent from './NavBarComponent'
 import CardProduct from './CardProduct'
+import DropDownMenu from './DropDownMenu'
 
 
 export{
@@ -15,4 +16,5 @@ export{
     TestimonialCard,
     NavBarComponent,
     CardProduct,
+    DropDownMenu,
 }

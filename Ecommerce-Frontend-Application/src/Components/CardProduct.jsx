@@ -3,7 +3,7 @@ import {IconAddProduct} from '../Assets'
 
 function CardProduct({props}) {
   return (
-    <div className='border-2 shadow-lg py-2 flex my-[2rem]'>
+    <div className='border-2 shadow-lg py-2 flex my-[2rem] sm:my-2 sm:ml-5'>
       <img className='w-[100px] self-start' src={props.icon} alt="" />
       <div className='flex flex-col'>
         <h2 className='text-[#0465D8] text-[16px]'>{props.title}</h2>

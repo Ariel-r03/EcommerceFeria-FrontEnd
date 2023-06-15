@@ -27,6 +27,9 @@ function NavBarComponent({prop}) {
               <li
                 key={link.id}
                 className="text-[16px] mx-3 hover:cursor-pointer hover:text-slate-400"
+                onClick={()=>{if(link.id=="tienda"){
+                  navigate("/tienda")
+                }}}
               >
                 {link.title}
               </li>
@@ -49,7 +52,7 @@ function NavBarComponent({prop}) {
             ></img>
           ))}
         </div>
-        <div className="bg-white border-2 rounded-xl absolute right-[8rem] top-[4rem] sm:right-[15rem] sm:top-[4rem] ">
+        <div className="bg-white border-2 rounded-xl absolute right-[8rem] top-[4rem] sm:right-[15rem] sm:top-[4rem] sm:z-10 ">
           {userDiv && <div className="w-[170px] h-[35px] sm:w-[250px] sm:h-[50px] flex justify-center items-center">
             <span onClick={()=>{navigate("/login")}} className="text-[12px] sm:text-[15px] hover:cursor-pointer hover:text-slate-400">Iniciar sesión/Registrarse</span></div> }
         </div>
@@ -76,6 +79,9 @@ function NavBarComponent({prop}) {
               <li
                 key={link.id}
                 className="text-[16px] mx-3 my-1 hover:cursor-pointer hover:text-slate-400"
+                onClick={()=>{if(link.id=="tienda"){
+                  navigate("/tienda")
+                }}}
               >
                 {link.title}
               </li>

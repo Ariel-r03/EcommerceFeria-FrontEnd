@@ -17,6 +17,9 @@ import {
   IconFacebook,
   IconInstagram,
   IconTwitter,
+  BannerShopPage1,
+  BannerShopPage2,
+  BannerShopPage3,
 } from "../Assets";
 
 export const NavLinks = [
@@ -106,37 +109,50 @@ export const products = [
   {
     id: "iphone14promax",
     title: "Iphone 14 pro max",
-    description:"Pantalla 120hz, desbloqueado de fabrica ,5g 256GB HDR, Zoom Optico, lorem ipsum , lorem impsun",
+    description:
+      "Pantalla 120hz, desbloqueado de fabrica ,5g 256GB HDR, Zoom Optico, lorem ipsum , lorem impsun",
     price: "1299.99",
     icon: CelularDestacado1,
   },
   {
     id: "samsungs20",
     title: "Samsung S20",
-    description:"Pantalla 120hz, desbloqueado de fabrica ,5g 256GB HDR, Zoom Optico, lorem ipsum , lorem impsun",
+    description:
+      "Pantalla 120hz, desbloqueado de fabrica ,5g 256GB HDR, Zoom Optico, lorem ipsum , lorem impsun",
     price: "499.99",
     icon: CelularDestacado2,
   },
   {
     id: "pixel7pro",
     title: "Pixel 7 pro",
-    description:"Pantalla 120hz, desbloqueado de fabrica ,5g 256GB HDR, Zoom Optico, lorem ipsum , lorem impsun",
+    description:
+      "Pantalla 120hz, desbloqueado de fabrica ,5g 256GB HDR, Zoom Optico, lorem ipsum , lorem impsun",
     price: "759.99",
     icon: CelularDestacado3,
   },
   {
     id: "samsungs21",
     title: "Samsung S20",
-    description:"Pantalla 120hz, desbloqueado de fabrica ,5g 256GB HDR, Zoom Optico, lorem ipsum , lorem impsun",
+    description:
+      "Pantalla 120hz, desbloqueado de fabrica ,5g 256GB HDR, Zoom Optico, lorem ipsum , lorem impsun",
     price: "499.99",
     icon: CelularDestacado2,
   },
   {
     id: "pixel7pr0",
     title: "Pixel 7 pro",
-    description:"Pantalla 120hz, desbloqueado de fabrica ,5g 256GB HDR, Zoom Optico, lorem ipsum , lorem impsun",
+    description:
+      "Pantalla 120hz, desbloqueado de fabrica ,5g 256GB HDR, Zoom Optico, lorem ipsum , lorem impsun",
     price: "759.99",
     icon: CelularDestacado3,
+  },
+  {
+    id: "iphone14promax",
+    title: "Iphone 14 pro max",
+    description:
+      "Pantalla 120hz, desbloqueado de fabrica ,5g 256GB HDR, Zoom Optico, lorem ipsum , lorem impsun",
+    price: "1299.99",
+    icon: CelularDestacado1,
   },
 ];
 
@@ -163,7 +179,7 @@ export const testimonials = [
     lastname: "Rodriguez",
     photo: ValentinaRodriguez,
     description:
-    "La atención al cliente en SmartCell es impecable. Los empleados son amigables, pacientes y realmente se preocupan por ayudarte a encontrar el teléfono adecuado."  
+      "La atención al cliente en SmartCell es impecable. Los empleados son amigables, pacientes y realmente se preocupan por ayudarte a encontrar el teléfono adecuado.",
   },
   {
     id: "santiagolopez",
@@ -171,33 +187,98 @@ export const testimonials = [
     lastname: "Lopez",
     photo: SantiagoLopez,
     description:
-    "Me encantó la experiencia de compra en SmartCell. El personal fue muy amable y conocedor de los productos. Me ayudaron a encontrar el teléfono perfecto para mis necesidades y me brindaron recomendaciones útiles."
-
-},
+      "Me encantó la experiencia de compra en SmartCell. El personal fue muy amable y conocedor de los productos. Me ayudaron a encontrar el teléfono perfecto para mis necesidades y me brindaron recomendaciones útiles.",
+  },
   {
     id: "isabellafernandez",
     name: "Isabella",
     lastname: "Fernandez",
     photo: IsabellaFernandez,
     description:
-    "SmartCell superó mis expectativas en términos de servicio al cliente. Fui recibido con una sonrisa y una actitud amigable desde el momento en que entré en la tienda."
+      "SmartCell superó mis expectativas en términos de servicio al cliente. Fui recibido con una sonrisa y una actitud amigable desde el momento en que entré en la tienda.",
   },
 ];
 
-export const socialMedias=[
+export const socialMedias = [
   {
-    id:"facebook",
-    title:"Facebook",
-    icon:IconFacebook,
+    id: "facebook",
+    title: "Facebook",
+    icon: IconFacebook,
   },
   {
-    id:"instagram",
-    title:"Instagram",
-    icon:IconInstagram,
+    id: "instagram",
+    title: "Instagram",
+    icon: IconInstagram,
   },
   {
-    id:"twitter",
-    title:"Twitter",
-    icon:IconTwitter,
+    id: "twitter",
+    title: "Twitter",
+    icon: IconTwitter,
+  },
+];
+
+export const categories = [
+  {
+    id: "smartphone",
+    title: "Smartphone",
+  },
+  {
+    id: "tabletas",
+    title: "Tabletas",
+  },
+  {
+    id: "audifonos",
+    title: "Audífonos",
+  },
+];
+
+export const brands = [
+  {
+    id: "samsung",
+    title: "Samsung",
+  },
+  {
+    id: "lg",
+    title: "LG",
+  },
+  {
+    id: "apple",
+    title: "Apple",
+  },
+];
+
+export const createDates=[
+  {
+    id:"2023",
+    title:"2023"
+  },
+  {
+    id:"2022",
+    title:"2022"
+  },
+  {
+    id:"2021",
+    title:"2021"
+  },
+]
+
+export const imgsShop=[
+  {
+    id: "samsungs23ultra",
+    icon: BannerShopPage1,
+    title: "Samsung S23 Ultra",
+    description: "Elegancia y calidad en un celular"
+  },
+  {
+    id: "iphone14promax",
+    icon: BannerShopPage2,
+    title: "Iphone 14 pro max",
+    description: "Tope de gama en cámaras"
+  },
+  {
+    id: "lgvelvet5g",
+    icon: BannerShopPage3,
+    title: "LG Velvet 5g",
+    description: "Buscas rápidez? acá la tienes."
   },
 ]

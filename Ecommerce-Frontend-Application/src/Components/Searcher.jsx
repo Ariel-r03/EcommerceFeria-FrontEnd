@@ -1,10 +1,11 @@
 import React from 'react'
-
+import {IconoLupa} from '../Assets'
 function Searcher() {
   return (
-    <input className='border-2  w-[10rem] h-[2rem] bg-white rounded-md'>
-      
-    </input>
+    <div className='bg-slate-950 flex flex-row justify-center items-center w-full h-[90px]'>
+      <input className='rounded-xl bg-white w-[350px] h-[35px] ' type="text"></input>
+      <img className='absolute right-[2rem] sm:right-[38rem]' src={IconoLupa} alt="" />
+    </div>
   )
 }
 

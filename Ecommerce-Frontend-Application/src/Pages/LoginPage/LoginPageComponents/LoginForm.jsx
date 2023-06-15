@@ -60,7 +60,7 @@ function LoginForm() {
           </button>
           <span className="text-[15px] text-[#767B97] mt-[2rem]">
             ¿No tienes cuenta aun? <br />
-            <span className="flex justify-center mb-[2rem] hover:cursor-pointer">
+            <span onClick={()=>navigate("/register")} className="flex justify-center mb-[2rem] hover:cursor-pointer">
               Regístrate aqui
             </span>
           </span>

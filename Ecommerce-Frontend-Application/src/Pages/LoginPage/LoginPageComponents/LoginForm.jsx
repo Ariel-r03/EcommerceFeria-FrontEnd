@@ -3,6 +3,7 @@ import { BannerImgAuthPage, BackgroundLoginPage } from "../../../Assets";
 import { socialMedias } from "../../../Constants";
 import { useForm} from "react-hook-form"
 import {postRequest} from '../../../Services/Login'
+import { useNavigate } from 'react-router-dom';
 function LoginForm() {
   const {
     register,
@@ -11,9 +12,13 @@ function LoginForm() {
     formState: { errors },
   } = useForm()
 
+  const navigate = useNavigate();
+
   const onSubmit = async(data) => {
     const response=await postRequest("http://ec2-54-226-200-205.compute-1.amazonaws.com/v1/auth/login",data);
     console.log(response);
+    alert("Bienvenido "+response.username);
+    navigate("/")
   }
   return (
     <section className="h-[100%] flex justify-center items-center">

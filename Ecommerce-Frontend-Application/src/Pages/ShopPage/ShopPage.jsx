@@ -1,6 +1,11 @@
 import React from "react";
 import { NavBarComponent, Searcher, Footer } from "../../Components";
-import { ShopPageBody, ShopPageHero, Categories } from "../ShopPage/ShopPageComponents";
+import {
+  ShopPageBody,
+  ShopPageHero,
+  Categories,
+} from "../ShopPage/ShopPageComponents";
+import { FilterContextProvider } from "../../Contexts/FilterModal/FilterContext";
 
 function ShopPage() {
   return (
@@ -16,11 +21,13 @@ function ShopPage() {
       </div>
       <div className="sm:h-auto justify-center sm:mx-[10rem] sm:flex flex-row">
         <div className="sm:w-[40%] hidden sm:flex">
-          <Categories/>
+          <Categories />
         </div>
-        <div className="sm:flex sm:h-auto sm:w-[60%] ">
-          <ShopPageBody />
-        </div>
+        <FilterContextProvider>
+          <div className="sm:flex sm:h-auto sm:w-[60%] ">
+            <ShopPageBody />
+          </div>
+        </FilterContextProvider>
       </div>
 
       <footer className="bg-smoothSlate sm:flex justify-center">

@@ -28,7 +28,7 @@ function ShopPageHero() {
         >
           {imgsShop.map((img) => (
             <SwiperSlide>
-             <BannerCard props={img}/>
+             <BannerCard key={img.id} props={img}/>
             </SwiperSlide>
           ))}
         </Swiper>

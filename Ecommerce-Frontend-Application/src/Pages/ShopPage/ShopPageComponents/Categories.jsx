@@ -26,7 +26,7 @@ function Categories() {
         </ul>
       </div>
       <div className="border-b-2">
-        <p className="ml-[4rem] pt-[2rem] font-bold text-[20px]">Fecha de creación</p>
+        <p className="ml-[4rem] pt-[2rem] font-bold text-[20px]">Fecha de lanzamiento</p>
         <ul className="flex flex-col pb-[4rem]">
           {createDates.map((date) => (
             <li className="flex flex-row my-1">

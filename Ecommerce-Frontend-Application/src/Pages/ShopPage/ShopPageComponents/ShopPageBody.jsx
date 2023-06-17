@@ -2,8 +2,23 @@ import React, { useState, useContext } from "react";
 import { products } from "../../../Constants";
 import { CardProduct } from "../../../Components";
 import { FilterShopComponent } from "../ShopPageComponents";
+import Modal from "react-modal";
+import { FilterContext } from "../../../Contexts/FilterModal/FilterContext";
 function ShopPageBody() {
-  const [isFilter,setIsFilter]=useState(false);
+  Modal.setAppElement(document.getElementById('root'));
+  const { isFilter,modifyingIsFilter } = useContext(FilterContext);
+  const customStyles = {
+    content: {
+      top: "72%",
+      left: "50%",
+      right: "auto",
+      bottom: "auto",
+      marginRight: "-50%",
+      transform: "translate(-50%, -50%)",
+      width: "100%",
+    },
+  };
+
   return (
     <section className="sm:border-2">
       <div className="mx-[2rem]">
@@ -13,9 +28,7 @@ function ShopPageBody() {
             Buscar
           </button>
           <button
-            /*onClick={() => {
-              setIsFilter(true);
-            }}*/
+            onClick={modifyingIsFilter}
             className="bg-slate-950 text-white w-[155px] h-[40px]"
           >
             Filtrar
@@ -27,13 +40,12 @@ function ShopPageBody() {
           ))}
         </div>
       </div>
-      {
-        isFilter && 
-        <div className="fixed top-14 w-full">
-          <FilterShopComponent/>
+
+      <Modal isOpen={isFilter} style={customStyles}>
+        <div className="w-full">
+          <FilterShopComponent />
         </div>
-        
-      }
+      </Modal>
     </section>
   );
 }

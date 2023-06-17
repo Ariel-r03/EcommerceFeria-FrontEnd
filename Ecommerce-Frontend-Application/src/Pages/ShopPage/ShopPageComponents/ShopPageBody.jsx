@@ -13,9 +13,9 @@ function ShopPageBody() {
             Buscar
           </button>
           <button
-            onClick={() => {
+            /*onClick={() => {
               setIsFilter(true);
-            }}
+            }}*/
             className="bg-slate-950 text-white w-[155px] h-[40px]"
           >
             Filtrar

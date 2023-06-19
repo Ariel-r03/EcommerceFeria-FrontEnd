@@ -9,11 +9,13 @@ import "react-responsive-pagination/themes/minimal.css";
 function ShopPageBody() {
   Modal.setAppElement(document.getElementById("root"));
   const { isFilter, modifyingIsFilter } = useContext(FilterContext);
-  const [totalPages, setTotalPages] = useState(0);
   const [currentPage, setCurrentPage] = useState(1);
-  const [currentItems, setCurrentItems] = useState(null);
-  const itemsPerPage = 6;
-  const [itemOffset, setItemOffset] = useState(0);
+  const [currentItems,setCurrentItems] =useState([]);
+  const [totalPages,setTotalPages]=useState(0)
+  const itemsPerPage = 3;
+  const [itemOffset, setItemOffset] = useState(currentPage*itemsPerPage);
+ 
+  
 
   const customStyles = {
     content: {
@@ -26,18 +28,21 @@ function ShopPageBody() {
       width: "100%",
     },
   };
-
-  function handlePageChange(page) {
-    setCurrentPage(page);
-    const newOffset= (page * itemsPerPage) % products.length;
-    setItemOffset(newOffset);
-  }
-
+  
   useEffect(() => {
-    const endOffset = itemOffset + itemsPerPage;
-    setCurrentItems(products.slice(itemOffset, endOffset));
+    const startOffset = itemOffset - itemsPerPage;
+    console.log("Voy desde "+ startOffset + " Hasta" + itemOffset)
+    setCurrentItems(products.slice(startOffset, itemOffset));
     setTotalPages(Math.ceil(products.length / itemsPerPage));
   }, [itemOffset, itemsPerPage, products]);
+
+  function handlePageChange(page) {
+    console.log(page);
+    const newOffset = (page * itemsPerPage);
+    setItemOffset(newOffset);
+    setCurrentPage(page);
+    console.log("He cambiado ahora inicio en",newOffset)
+  }
 
   return (
     <section className="sm:border-2">

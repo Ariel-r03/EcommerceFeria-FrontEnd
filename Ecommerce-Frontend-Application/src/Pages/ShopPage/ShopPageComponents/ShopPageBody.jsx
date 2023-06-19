@@ -1,12 +1,20 @@
-import React, { useState, useContext } from "react";
+import React, { useState, useContext, useEffect } from "react";
 import { products } from "../../../Constants";
 import { CardProduct } from "../../../Components";
 import { FilterShopComponent } from "../ShopPageComponents";
 import Modal from "react-modal";
 import { FilterContext } from "../../../Contexts/FilterModal/FilterContext";
+import ResponsivePagination from "react-responsive-pagination";
+import "react-responsive-pagination/themes/minimal.css";
 function ShopPageBody() {
-  Modal.setAppElement(document.getElementById('root'));
-  const { isFilter,modifyingIsFilter } = useContext(FilterContext);
+  Modal.setAppElement(document.getElementById("root"));
+  const { isFilter, modifyingIsFilter } = useContext(FilterContext);
+  const [totalPages, setTotalPages] = useState(0);
+  const [currentPage, setCurrentPage] = useState(1);
+  const [currentItems, setCurrentItems] = useState(null);
+  const itemsPerPage = 6;
+  const [itemOffset, setItemOffset] = useState(0);
+
   const customStyles = {
     content: {
       top: "72%",
@@ -18,6 +26,18 @@ function ShopPageBody() {
       width: "100%",
     },
   };
+
+  function handlePageChange(page) {
+    setCurrentPage(page);
+    const newOffset= (page * itemsPerPage) % products.length;
+    setItemOffset(newOffset);
+  }
+
+  useEffect(() => {
+    const endOffset = itemOffset + itemsPerPage;
+    setCurrentItems(products.slice(itemOffset, endOffset));
+    setTotalPages(Math.ceil(products.length / itemsPerPage));
+  }, [itemOffset, itemsPerPage, products]);
 
   return (
     <section className="sm:border-2">
@@ -35,9 +55,16 @@ function ShopPageBody() {
           </button>
         </div>
         <div className="mt-[2rem] sm:grid grid-cols-2">
-          {products.map((product) => (
+          {currentItems.map((product) => (
             <CardProduct props={product} />
           ))}
+        </div>
+        <div className="flex flex-row w-[100%] justify-center my-5">
+          <ResponsivePagination
+            total={totalPages}
+            current={currentPage}
+            onPageChange={(page) => handlePageChange(page)}
+          ></ResponsivePagination>
         </div>
       </div>
 

@@ -113,6 +113,9 @@ export const products = [
       "Pantalla 120hz, desbloqueado de fabrica ,5g 256GB HDR, Zoom Optico, lorem ipsum , lorem impsun",
     price: "1299.99",
     icon: CelularDestacado1,
+    category: "SmartPhone",
+    brand: "Apple",
+    launchDate: "18/06/2023",
   },
   {
     id: "samsungs20",

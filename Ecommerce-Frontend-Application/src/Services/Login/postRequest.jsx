@@ -6,7 +6,7 @@ const postRequest = async (URL,data) => {
     const response = await axios.post(URL, data);
     return (response.data);
   } catch (error) {
-    return error;
+    return error.response.data;
   }
 };
 

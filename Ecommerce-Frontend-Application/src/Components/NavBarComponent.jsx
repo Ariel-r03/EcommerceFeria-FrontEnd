@@ -63,7 +63,7 @@ function NavBarComponent({ prop }) {
             ></img>
           ))}
         </div>
-        <div className="bg-white border-2 rounded-xl absolute right-[8rem] top-[4rem] sm:right-[15rem] sm:top-[4rem] sm:z-10 ">
+        <div className="bg-white border-2 rounded-xl absolute right-[8rem] top-[4rem] sm:right-[15rem] sm:top-[4rem] sm:z-10 z-10 ">
           {userDiv && (
             <div className="w-[170px] h-[35px] sm:w-[250px] sm:h-[50px] flex justify-center items-center">
               <span
@@ -78,7 +78,7 @@ function NavBarComponent({ prop }) {
           )}
 
           {userInfo && (
-            <div className="w-[100px] h-[35px] sm:w-[250px] sm:h-[50px] flex justify-center items-center">
+            <div className="w-[150px] sm:w-[250px] sm:h-[50px] flex justify-center items-center ">
               <ul>
                 <li>{auth.user.username}</li>
                 <li onClick={()=>{

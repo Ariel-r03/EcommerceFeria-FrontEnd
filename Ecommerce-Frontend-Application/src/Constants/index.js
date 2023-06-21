@@ -145,7 +145,7 @@ export const products = [
     details:["ext-gen sensor & computational processing for stunning low light shots","Create cinematic color expression with S-Cinetone for mobile",
      "4K HDR native 120fps video recording2 on all rear lenses", "Latest AI to deliver exceptional camera results","Capture beautiful and natural skin tones under various light situations.",
     "Bright 6.5” 21:9 4K HDR OLED 120Hz3 wide display with improved Real-time HDR Drive."],
-    color:"FDE9E6",
+    color:"5D8BD0",
     category: "SmartPhone",
     brand: "Pixel",
     launchDate: "18/06/2023",

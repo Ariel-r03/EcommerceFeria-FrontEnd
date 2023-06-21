@@ -9,10 +9,9 @@ const Routers = () => {
       <Route
         key={pages.title}
         path={`/${pages.path}`}
-        element={pages.element}
+        element={<ProtectedRoute title={pages.title}>{pages.element}</ProtectedRoute>}
       ></Route>
     );
-    
   });
 
   return <Routes>{pageRoutes}</Routes>;

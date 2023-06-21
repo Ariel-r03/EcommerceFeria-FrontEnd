@@ -1,7 +1,9 @@
 import React from 'react'
 import {IconAddProduct} from '../Assets'
+import {useNavigate} from 'react-router-dom'
 
 function CardProduct({props}) {
+  const navigate = useNavigate();
   return (
     <div className='border-2 shadow-lg py-2 flex my-[2rem] sm:my-2 sm:ml-5'>
       <img className='w-[100px] self-start' src={props.icon} alt="" />
@@ -12,7 +14,7 @@ function CardProduct({props}) {
         <p className='my-[1rem] text-[#997032] font-semibold'>${props.price}</p>
         <div className='flex flex-row mb-[1rem] justify-end items-center'>
             <span className='mx-[0.5rem] text-[#0465D8] text-[13px] hover:cursor-pointer'>Agregar</span>
-            <img className='mr-[1rem] hover:cursor-pointer' src={IconAddProduct} alt="" />
+            <img onClick={()=>{navigate(`product-view/${props.id}`)}} className='mr-[1rem] hover:cursor-pointer' src={IconAddProduct} alt="" />
         </div>
       </div>
 

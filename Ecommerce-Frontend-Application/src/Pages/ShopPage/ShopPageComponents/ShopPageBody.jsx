@@ -6,6 +6,7 @@ import Modal from "react-modal";
 import { FilterContext } from "../../../Contexts/FilterModal/FilterContext";
 import ResponsivePagination from "react-responsive-pagination";
 import "react-responsive-pagination/themes/minimal.css";
+import {Navigate} from 'react-router-dom'
 function ShopPageBody() {
   Modal.setAppElement(document.getElementById("root"));
   const { isFilter, modifyingIsFilter } = useContext(FilterContext);

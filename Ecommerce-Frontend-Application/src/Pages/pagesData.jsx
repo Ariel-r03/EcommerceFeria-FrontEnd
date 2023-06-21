@@ -3,6 +3,7 @@ import LoginPage from "./LoginPage/LoginPage";
 import RegisterPage from "./RegisterPage/RegisterPage";
 import ShopPage from "./ShopPage/ShopPage";
 import AdminPage from "./AdminPage/AdminPage";
+import ProductViewPage from './ProductViewPage/ProductViewPage'
 export const pagesData = [
   {
     path: "/",
@@ -33,5 +34,11 @@ export const pagesData = [
     element: <AdminPage />,
     title: "Panel de administrador",
     isProtected: true,
+  },
+  {
+    path: "/tienda/product-view/:id",
+    element: <ProductViewPage/>,
+    title: "Producto",
+    isProtected: false,
   },
 ];

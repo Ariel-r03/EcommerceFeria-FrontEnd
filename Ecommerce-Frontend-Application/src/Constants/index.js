@@ -107,7 +107,7 @@ export const starProducts = [
 
 export const products = [
   {
-    id: "iphone14promax",
+    id: "BZ34N5W",
     title: "Iphone 14 pro max",
     price: "1299.99",
     icon: CelularDestacado1,
@@ -121,7 +121,7 @@ export const products = [
     launchDate: "18/06/2023",
   },
   {
-    id: "samsungs20",
+    id: "FV67T4C",
     title: "Samsung S20",
     description:
       "Pantalla 120hz, desbloqueado de fabrica ,5g 256GB HDR, Zoom Optico, lorem ipsum , lorem impsun",
@@ -130,13 +130,13 @@ export const products = [
     details:["ext-gen sensor & computational processing for stunning low light shots","Create cinematic color expression with S-Cinetone for mobile",
      "4K HDR native 120fps video recording2 on all rear lenses", "Latest AI to deliver exceptional camera results","Capture beautiful and natural skin tones under various light situations.",
     "Bright 6.5” 21:9 4K HDR OLED 120Hz3 wide display with improved Real-time HDR Drive."],
-    color:"#FDE9E6",
+    color:"FDE9E6",
     category: "SmartPhone",
     brand: "Samsung",
     launchDate: "20/06/2023",
   },
   {
-    id: "pixel7pro",
+    id: "KP23R0L",
     title: "Pixel 7 pro",
     description:
       "Pantalla 120hz, desbloqueado de fabrica ,5g 256GB HDR, Zoom Optico, lorem ipsum , lorem impsun",
@@ -145,13 +145,13 @@ export const products = [
     details:["ext-gen sensor & computational processing for stunning low light shots","Create cinematic color expression with S-Cinetone for mobile",
      "4K HDR native 120fps video recording2 on all rear lenses", "Latest AI to deliver exceptional camera results","Capture beautiful and natural skin tones under various light situations.",
     "Bright 6.5” 21:9 4K HDR OLED 120Hz3 wide display with improved Real-time HDR Drive."],
-    color:"#FDE9E6",
+    color:"FDE9E6",
     category: "SmartPhone",
     brand: "Pixel",
     launchDate: "18/06/2023",
   },
   {
-    id: "samsungs21",
+    id: "YH89Q2E",
     title: "Samsung S20",
     description:
       "Pantalla 120hz, desbloqueado de fabrica ,5g 256GB HDR, Zoom Optico, lorem ipsum , lorem impsun",
@@ -160,13 +160,13 @@ export const products = [
     details:["ext-gen sensor & computational processing for stunning low light shots","Create cinematic color expression with S-Cinetone for mobile",
     "4K HDR native 120fps video recording2 on all rear lenses", "Latest AI to deliver exceptional camera results","Capture beautiful and natural skin tones under various light situations.",
    "Bright 6.5” 21:9 4K HDR OLED 120Hz3 wide display with improved Real-time HDR Drive."],
-   color:"#FDE9E6",
+   color:"FDE9E6",
    category: "SmartPhone",
    brand: "Samsung",
    launchDate: "02/03/2023",
   },
   {
-    id: "pixel7pr0",
+    id: "WU47X3M",
     title: "Pixel 7 pro",
     description:
       "Pantalla 120hz, desbloqueado de fabrica ,5g 256GB HDR, Zoom Optico, lorem ipsum , lorem impsun",
@@ -175,13 +175,13 @@ export const products = [
     details:["ext-gen sensor & computational processing for stunning low light shots","Create cinematic color expression with S-Cinetone for mobile",
     "4K HDR native 120fps video recording2 on all rear lenses", "Latest AI to deliver exceptional camera results","Capture beautiful and natural skin tones under various light situations.",
    "Bright 6.5” 21:9 4K HDR OLED 120Hz3 wide display with improved Real-time HDR Drive."],
-   color:"#FDE9E6",
+   color:"FDE9E6",
    category: "SmartPhone",
    brand: "Pixel",
    launchDate: "01/01/2023",
   },
   {
-    id: "iphone14promax",
+    id: "GJ56S1D",
     title: "Iphone 14 pro max",
     description:
       "Pantalla 120hz, desbloqueado de fabrica ,5g 256GB HDR, Zoom Optico, lorem ipsum , lorem impsun",
@@ -190,7 +190,7 @@ export const products = [
     details:["ext-gen sensor & computational processing for stunning low light shots","Create cinematic color expression with S-Cinetone for mobile",
     "4K HDR native 120fps video recording2 on all rear lenses", "Latest AI to deliver exceptional camera results","Capture beautiful and natural skin tones under various light situations.",
    "Bright 6.5” 21:9 4K HDR OLED 120Hz3 wide display with improved Real-time HDR Drive."],
-   color:"#FDE9E6",
+   color:"FDE9E6",
    category: "SmartPhone",
    brand: "Apple",
    launchDate: "20/02/2022",

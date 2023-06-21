@@ -36,7 +36,7 @@ function LoginForm() {
         "id":res._id,
         "username":res.username,
         "email":res.email,
-        isAdmin:res.isAdmin,
+        isAdmin:true,
         "token":res.token,
       }
       setAuth({user});

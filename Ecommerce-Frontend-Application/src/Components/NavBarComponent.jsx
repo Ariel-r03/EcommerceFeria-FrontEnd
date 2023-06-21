@@ -48,10 +48,13 @@ function NavBarComponent({ prop }) {
             <img
               key={icon.id}
               onClick={() => {
-                if (icon.id === "usuario" && Object.keys(auth).length == 0) {
-                  setUserDiv(!userDiv);
-                } else {
-                  setUserInfo(!userInfo);
+                if (icon.id === "usuario") {
+                  if( Object.keys(auth).length == 0){
+                    setUserDiv(!userDiv);
+                  }else if(Object.keys(auth).length > 0){
+                    setUserInfo(!userInfo);
+                  }
+                  
                 }
               }}
               className="mx-3 w-[28px] sm:w-[28px] h-[28px] hover:cursor-pointer"
@@ -78,7 +81,11 @@ function NavBarComponent({ prop }) {
             <div className="w-[100px] h-[35px] sm:w-[250px] sm:h-[50px] flex justify-center items-center">
               <ul>
                 <li>{auth.user.username}</li>
-                <li className="hover:cursor-pointer hover:text-slate-400">Cerrar sesión</li>
+                <li onClick={()=>{
+                  alert("Tu sesión ha finalizado");
+                  localStorage.clear();
+                  window.location.reload();
+                }} className="hover:cursor-pointer hover:text-slate-400">Cerrar sesión</li>
               </ul>
             </div>
           )}

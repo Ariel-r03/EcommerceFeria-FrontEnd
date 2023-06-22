@@ -4,12 +4,12 @@ const ShoppingCartContext = createContext();
 
 export const ShoppingCartProvider = ({ children }) => {
   const [cartProducts, setCartProducts] = useState([]);
-
+  
   function addProduct(p) {
     setCartProducts((prevCartProducts) => [
       ...prevCartProducts,
       {
-        id: p.id,
+        id: p._id,
         title: p.title,
         icon: p.icon,
         price: p.price,

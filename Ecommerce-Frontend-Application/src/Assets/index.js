@@ -28,7 +28,10 @@ import IconArrowDown from "../Assets/IconArrowDown.svg";
 import BannerShopPage1 from "../Assets/BannerShopPage1.svg";
 import BannerShopPage2 from "../Assets/BannerShopPage2.svg";
 import BannerShopPage3 from "../Assets/BannerShopPage3.svg";
-
+import CloseProductcard from "../Assets/CloseProductcard.svg";
+import ShopCart from "../Assets/ShopCart.svg";
+import Check from "../Assets/Check.svg";
+import CreditCards from "../Assets/CreditCards.svg";
 export {
   IconoCarritoCompras,
   IconoLupa,
@@ -60,4 +63,8 @@ export {
   BannerShopPage1,
   BannerShopPage2,
   BannerShopPage3,
+  CloseProductcard,
+  ShopCart,
+  Check,
+  CreditCards,
 };

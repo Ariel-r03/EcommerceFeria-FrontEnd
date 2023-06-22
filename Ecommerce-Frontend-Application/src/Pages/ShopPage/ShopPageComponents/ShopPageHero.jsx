@@ -11,7 +11,7 @@ import { Autoplay, Pagination, Navigation,} from "swiper";
 import {BannerCard}from '../ShopPageComponents'
 function ShopPageHero() {
   return (
-    <section className="flex flex-col justify-center my-0">
+    <section className="justify-center my-0">
       <div className="">
         <Swiper
           slidesPerView={1}

@@ -4,6 +4,7 @@ import RegisterPage from "./RegisterPage/RegisterPage";
 import ShopPage from "./ShopPage/ShopPage";
 import AdminPage from "./AdminPage/AdminPage";
 import ProductViewPage from './ProductViewPage/ProductViewPage'
+import ShoppingCartPage from './ShoppingCartPage/ShoppingCartPage'
 export const pagesData = [
   {
     path: "/",
@@ -39,6 +40,12 @@ export const pagesData = [
     path: "/tienda/product-view/:id",
     element: <ProductViewPage/>,
     title: "Producto",
+    isProtected: false,
+  },
+  {
+    path: "/misProductos",
+    element: <ShoppingCartPage/>,
+    title: "Mis Productos",
     isProtected: false,
   },
 ];

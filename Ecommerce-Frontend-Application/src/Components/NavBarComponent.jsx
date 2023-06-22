@@ -55,6 +55,8 @@ function NavBarComponent({ prop }) {
                     setUserInfo(!userInfo);
                   }
                   
+                }else if(icon.id == "carritoCompras"){
+                  navigate("/misProductos");
                 }
               }}
               className="mx-3 w-[28px] sm:w-[28px] h-[28px] hover:cursor-pointer"

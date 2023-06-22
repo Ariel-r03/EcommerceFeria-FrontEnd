@@ -1,12 +1,15 @@
 import React, { useContext, useEffect, useState } from "react";
 import ShoppingCartContext from "../../../Contexts/ShoppingCart/ShoppingCartProvider";
+import AuthContext from '../../../Contexts/Authentication/AuthProvider'
 import { ShoppingCartProductCard } from "../ShoppingCartComponents";
 import { Check, ShopCart, CreditCards } from "../../../Assets";
+import {PayProduct} from '../../../Services/Products'
 import { useNavigate } from "react-router-dom";
 
 function ShoppingCartBody() {
   const navigate = useNavigate();
   const { cartProducts } = useContext(ShoppingCartContext);
+  const {auth}=useContext(AuthContext);
   const [envio, setEnvio] = useState(100);
   const subTotal = cartProducts.reduce(
     (total, obj) => total + parseFloat(obj.price),
@@ -22,6 +25,15 @@ function ShoppingCartBody() {
         </h1>
       </div>
     );
+  }
+
+  const handlePay = ()=>{
+    if(Object.keys(auth).length == 0){
+      navigate("/login");
+    }
+    cartProducts.map(async(c)=>{
+      const res= await PayProduct(c.id,auth.user.token);
+    })
   }
 
   return (
@@ -66,7 +78,7 @@ function ShoppingCartBody() {
             </div>
           </div>
           <div className="flex mt-5 mb-3 justify-center">
-            <button className="w-[300px] h-[40px] border-2 border-slate-800">
+            <button onClick={handlePay} className="w-[300px] h-[40px] border-2 border-slate-800">
               Pagar
             </button>
           </div>

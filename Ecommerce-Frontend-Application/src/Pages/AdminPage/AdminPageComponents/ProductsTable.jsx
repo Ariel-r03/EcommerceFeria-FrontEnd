@@ -64,6 +64,9 @@ function ProductsTable() {
        "description": data.description,
        "details": details, 
     },auth.user.token)
+    alert(res.message);
+    showProducts();
+    setOpen(false);
 
   }
   const customStyles = {
@@ -91,6 +94,7 @@ function ProductsTable() {
     console.log(id);
     const res= await DeleteProduct(id,auth.user.token);
     showProducts();
+    alert(res.message);
   }
 
   const colums2 = [

@@ -1,22 +1,23 @@
 import React, { useState, useContext, useEffect } from "react";
-import { products } from "../../../Constants";
+//import { products } from "../../../Constants";
+import axios from "axios";
 import { CardProduct } from "../../../Components";
 import { FilterShopComponent } from "../ShopPageComponents";
 import Modal from "react-modal";
 import { FilterContext } from "../../../Contexts/FilterModal/FilterContext";
 import ResponsivePagination from "react-responsive-pagination";
 import "react-responsive-pagination/themes/minimal.css";
-import {Navigate} from 'react-router-dom'
+import { Navigate } from "react-router-dom";
+//import {GetProducts} from '../../../Services/Products'
 function ShopPageBody() {
   Modal.setAppElement(document.getElementById("root"));
   const { isFilter, modifyingIsFilter } = useContext(FilterContext);
   const [currentPage, setCurrentPage] = useState(1);
-  const [currentItems,setCurrentItems] =useState([]);
-  const [totalPages,setTotalPages]=useState(0)
+  const [currentItems, setCurrentItems] = useState([]);
+  const [totalPages, setTotalPages] = useState(0);
   const itemsPerPage = 3;
-  const [itemOffset, setItemOffset] = useState(currentPage*itemsPerPage);
- 
-  
+  const [itemOffset, setItemOffset] = useState(currentPage * itemsPerPage);
+  const [products, setProducts] = useState([]);
 
   const customStyles = {
     content: {
@@ -29,20 +30,35 @@ function ShopPageBody() {
       width: "100%",
     },
   };
-  
+
+  const showProducts = () => {
+    axios
+      .get("http://ec2-54-226-200-205.compute-1.amazonaws.com/v1/product")
+      .then((res) => {
+        console.log(res.data);
+        setProducts(res.data);
+      });
+  };
+
   useEffect(() => {
-    const startOffset = itemOffset - itemsPerPage;
-    console.log("Voy desde "+ startOffset + " Hasta" + itemOffset)
-    setCurrentItems(products.slice(startOffset, itemOffset));
-    setTotalPages(Math.ceil(products.length / itemsPerPage));
+    showProducts();
+  }, []);
+
+  useEffect(() => {
+    if (Array.isArray(products)) {
+      const startOffset = itemOffset - itemsPerPage;
+      console.log("Voy desde " + startOffset + " Hasta" + itemOffset);
+      setCurrentItems(products.slice(startOffset, itemOffset));
+      setTotalPages(Math.ceil(products.length / itemsPerPage));
+    }
   }, [itemOffset, itemsPerPage, products]);
 
   function handlePageChange(page) {
     console.log(page);
-    const newOffset = (page * itemsPerPage);
+    const newOffset = page * itemsPerPage;
     setItemOffset(newOffset);
     setCurrentPage(page);
-    console.log("He cambiado ahora inicio en",newOffset)
+    console.log("He cambiado ahora inicio en", newOffset);
   }
 
   return (

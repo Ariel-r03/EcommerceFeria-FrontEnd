@@ -1,12 +1,15 @@
 import React, { useContext, useEffect, useState } from "react";
 import ShoppingCartContext from "../../../Contexts/ShoppingCart/ShoppingCartProvider";
+import AuthContext from "../../../Contexts/Authentication/AuthProvider";
 import { ShoppingCartProductCard } from "../ShoppingCartComponents";
 import { Check, ShopCart, CreditCards } from "../../../Assets";
+import { PayProduct } from "../../../Services/Products";
 import { useNavigate } from "react-router-dom";
 
 function ShoppingCartBody() {
   const navigate = useNavigate();
   const { cartProducts } = useContext(ShoppingCartContext);
+  const { auth } = useContext(AuthContext);
   const [envio, setEnvio] = useState(100);
   const subTotal = cartProducts.reduce(
     (total, obj) => total + parseFloat(obj.price),
@@ -23,6 +26,25 @@ function ShoppingCartBody() {
       </div>
     );
   }
+
+  const handlePay = async () => {
+    if (Object.keys(auth).length == 0) {
+      navigate("/login");
+    }
+
+    const payProducts = cartProducts.map((c) => {
+      return {
+        id: c.id,
+        stock: 1,
+      };
+    });
+
+    console.log(payProducts);
+    const res = await PayProduct(payProducts, auth.user.token);
+    alert("Tu compra fue satisfactoria");
+    localStorage.clear();
+    window.location.reload();
+  };
 
   return (
     <section className="sm:flex justify-center">
@@ -66,7 +88,10 @@ function ShoppingCartBody() {
             </div>
           </div>
           <div className="flex mt-5 mb-3 justify-center">
-            <button className="w-[300px] h-[40px] border-2 border-slate-800">
+            <button
+              onClick={handlePay}
+              className="w-[300px] h-[40px] border-2 border-slate-800"
+            >
               Pagar
             </button>
           </div>
@@ -90,9 +115,7 @@ function ShoppingCartBody() {
               <img className="w-[300px]" src={CreditCards} alt="" />
             </div>
           </div>
-          
         </div>
-        
       </div>
     </section>
   );

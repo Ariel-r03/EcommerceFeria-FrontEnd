@@ -7,10 +7,10 @@ function ProductViewPage() {
       <div>
         <NavBarComponent />
       </div>
-      <div>
+      <div className="">
         <ProductCard/>
       </div>
-      <div className="bg-smoothSlate sm:flex justify-center">
+      <div className="bg-smoothSlate sm:flex justify-center mt-auto">
         <Footer />
       </div>
     </div>

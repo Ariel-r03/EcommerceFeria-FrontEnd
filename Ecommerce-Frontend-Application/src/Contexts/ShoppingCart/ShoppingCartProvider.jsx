@@ -19,6 +19,13 @@ export const ShoppingCartProvider = ({ children }) => {
     console.log("Se ha agregado");
   }
 
+  function deleteProduct(productId) {
+    const index = cartProducts.findIndex((cart) => cart.id === productId);
+    if (index !== -1) {
+      setCartProducts(cartProducts.slice(0, index).concat(cartProducts.slice(index + 1)));
+    }
+  }
+
   useEffect(() => {
     const storedData = localStorage.getItem('cartProducts');
     if (storedData) {
@@ -33,7 +40,7 @@ export const ShoppingCartProvider = ({ children }) => {
   }, [cartProducts]);
 
   return (
-    <ShoppingCartContext.Provider value={{ cartProducts, addProduct }}>
+    <ShoppingCartContext.Provider value={{ cartProducts, addProduct,deleteProduct }}>
       {children}
     </ShoppingCartContext.Provider>
   );

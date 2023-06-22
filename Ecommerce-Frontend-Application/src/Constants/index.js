@@ -20,6 +20,11 @@ import {
   BannerShopPage1,
   BannerShopPage2,
   BannerShopPage3,
+  DashboardIcon,
+  ProductsIcon,
+  OrdersIcon,
+  CustomersIcon,
+  ReportsIcon,
 } from "../Assets";
 
 export const NavLinks = [
@@ -111,11 +116,17 @@ export const products = [
     title: "Iphone 14 pro max",
     price: "1299.99",
     icon: CelularDestacado1,
-    description: "Pantalla 120hz, desbloqueado de fabrica ,5g 256GB HDR, Zoom Optico, lorem ipsum , lorem impsun",
-    details:["ext-gen sensor & computational processing for stunning low light shots","Create cinematic color expression with S-Cinetone for mobile",
-     "4K HDR native 120fps video recording2 on all rear lenses", "Latest AI to deliver exceptional camera results","Capture beautiful and natural skin tones under various light situations.",
-    "Bright 6.5” 21:9 4K HDR OLED 120Hz3 wide display with improved Real-time HDR Drive."],
-    color:"FDE9E6",
+    description:
+      "Pantalla 120hz, desbloqueado de fabrica ,5g 256GB HDR, Zoom Optico, lorem ipsum , lorem impsun",
+    details: [
+      "ext-gen sensor & computational processing for stunning low light shots",
+      "Create cinematic color expression with S-Cinetone for mobile",
+      "4K HDR native 120fps video recording2 on all rear lenses",
+      "Latest AI to deliver exceptional camera results",
+      "Capture beautiful and natural skin tones under various light situations.",
+      "Bright 6.5” 21:9 4K HDR OLED 120Hz3 wide display with improved Real-time HDR Drive.",
+    ],
+    color: "FDE9E6",
     category: "SmartPhone",
     brand: "Apple",
     launchDate: "18/06/2023",
@@ -127,10 +138,15 @@ export const products = [
       "Pantalla 120hz, desbloqueado de fabrica ,5g 256GB HDR, Zoom Optico, lorem ipsum , lorem impsun",
     price: "499.99",
     icon: CelularDestacado2,
-    details:["ext-gen sensor & computational processing for stunning low light shots","Create cinematic color expression with S-Cinetone for mobile",
-     "4K HDR native 120fps video recording2 on all rear lenses", "Latest AI to deliver exceptional camera results","Capture beautiful and natural skin tones under various light situations.",
-    "Bright 6.5” 21:9 4K HDR OLED 120Hz3 wide display with improved Real-time HDR Drive."],
-    color:"FDE9E6",
+    details: [
+      "ext-gen sensor & computational processing for stunning low light shots",
+      "Create cinematic color expression with S-Cinetone for mobile",
+      "4K HDR native 120fps video recording2 on all rear lenses",
+      "Latest AI to deliver exceptional camera results",
+      "Capture beautiful and natural skin tones under various light situations.",
+      "Bright 6.5” 21:9 4K HDR OLED 120Hz3 wide display with improved Real-time HDR Drive.",
+    ],
+    color: "FDE9E6",
     category: "SmartPhone",
     brand: "Samsung",
     launchDate: "20/06/2023",
@@ -142,10 +158,15 @@ export const products = [
       "Pantalla 120hz, desbloqueado de fabrica ,5g 256GB HDR, Zoom Optico, lorem ipsum , lorem impsun",
     price: "759.99",
     icon: CelularDestacado3,
-    details:["ext-gen sensor & computational processing for stunning low light shots","Create cinematic color expression with S-Cinetone for mobile",
-     "4K HDR native 120fps video recording2 on all rear lenses", "Latest AI to deliver exceptional camera results","Capture beautiful and natural skin tones under various light situations.",
-    "Bright 6.5” 21:9 4K HDR OLED 120Hz3 wide display with improved Real-time HDR Drive."],
-    color:"5D8BD0",
+    details: [
+      "ext-gen sensor & computational processing for stunning low light shots",
+      "Create cinematic color expression with S-Cinetone for mobile",
+      "4K HDR native 120fps video recording2 on all rear lenses",
+      "Latest AI to deliver exceptional camera results",
+      "Capture beautiful and natural skin tones under various light situations.",
+      "Bright 6.5” 21:9 4K HDR OLED 120Hz3 wide display with improved Real-time HDR Drive.",
+    ],
+    color: "5D8BD0",
     category: "SmartPhone",
     brand: "Pixel",
     launchDate: "18/06/2023",
@@ -157,13 +178,18 @@ export const products = [
       "Pantalla 120hz, desbloqueado de fabrica ,5g 256GB HDR, Zoom Optico, lorem ipsum , lorem impsun",
     price: "499.99",
     icon: CelularDestacado2,
-    details:["ext-gen sensor & computational processing for stunning low light shots","Create cinematic color expression with S-Cinetone for mobile",
-    "4K HDR native 120fps video recording2 on all rear lenses", "Latest AI to deliver exceptional camera results","Capture beautiful and natural skin tones under various light situations.",
-   "Bright 6.5” 21:9 4K HDR OLED 120Hz3 wide display with improved Real-time HDR Drive."],
-   color:"FDE9E6",
-   category: "SmartPhone",
-   brand: "Samsung",
-   launchDate: "02/03/2023",
+    details: [
+      "ext-gen sensor & computational processing for stunning low light shots",
+      "Create cinematic color expression with S-Cinetone for mobile",
+      "4K HDR native 120fps video recording2 on all rear lenses",
+      "Latest AI to deliver exceptional camera results",
+      "Capture beautiful and natural skin tones under various light situations.",
+      "Bright 6.5” 21:9 4K HDR OLED 120Hz3 wide display with improved Real-time HDR Drive.",
+    ],
+    color: "FDE9E6",
+    category: "SmartPhone",
+    brand: "Samsung",
+    launchDate: "02/03/2023",
   },
   {
     id: "WU47X3M",
@@ -172,13 +198,18 @@ export const products = [
       "Pantalla 120hz, desbloqueado de fabrica ,5g 256GB HDR, Zoom Optico, lorem ipsum , lorem impsun",
     price: "759.99",
     icon: CelularDestacado3,
-    details:["ext-gen sensor & computational processing for stunning low light shots","Create cinematic color expression with S-Cinetone for mobile",
-    "4K HDR native 120fps video recording2 on all rear lenses", "Latest AI to deliver exceptional camera results","Capture beautiful and natural skin tones under various light situations.",
-   "Bright 6.5” 21:9 4K HDR OLED 120Hz3 wide display with improved Real-time HDR Drive."],
-   color:"FDE9E6",
-   category: "SmartPhone",
-   brand: "Pixel",
-   launchDate: "01/01/2023",
+    details: [
+      "ext-gen sensor & computational processing for stunning low light shots",
+      "Create cinematic color expression with S-Cinetone for mobile",
+      "4K HDR native 120fps video recording2 on all rear lenses",
+      "Latest AI to deliver exceptional camera results",
+      "Capture beautiful and natural skin tones under various light situations.",
+      "Bright 6.5” 21:9 4K HDR OLED 120Hz3 wide display with improved Real-time HDR Drive.",
+    ],
+    color: "FDE9E6",
+    category: "SmartPhone",
+    brand: "Pixel",
+    launchDate: "01/01/2023",
   },
   {
     id: "GJ56S1D",
@@ -187,13 +218,18 @@ export const products = [
       "Pantalla 120hz, desbloqueado de fabrica ,5g 256GB HDR, Zoom Optico, lorem ipsum , lorem impsun",
     price: "1299.99",
     icon: CelularDestacado1,
-    details:["ext-gen sensor & computational processing for stunning low light shots","Create cinematic color expression with S-Cinetone for mobile",
-    "4K HDR native 120fps video recording2 on all rear lenses", "Latest AI to deliver exceptional camera results","Capture beautiful and natural skin tones under various light situations.",
-   "Bright 6.5” 21:9 4K HDR OLED 120Hz3 wide display with improved Real-time HDR Drive."],
-   color:"FDE9E6",
-   category: "SmartPhone",
-   brand: "Apple",
-   launchDate: "20/02/2022",
+    details: [
+      "ext-gen sensor & computational processing for stunning low light shots",
+      "Create cinematic color expression with S-Cinetone for mobile",
+      "4K HDR native 120fps video recording2 on all rear lenses",
+      "Latest AI to deliver exceptional camera results",
+      "Capture beautiful and natural skin tones under various light situations.",
+      "Bright 6.5” 21:9 4K HDR OLED 120Hz3 wide display with improved Real-time HDR Drive.",
+    ],
+    color: "FDE9E6",
+    category: "SmartPhone",
+    brand: "Apple",
+    launchDate: "20/02/2022",
   },
 ];
 
@@ -264,11 +300,11 @@ export const categories = [
     title: "Smartphone",
   },
   {
-    id: "tabletas",
+    id: "tablet",
     title: "Tabletas",
   },
   {
-    id: "audifonos",
+    id: "headset",
     title: "Audífonos",
   },
 ];
@@ -288,38 +324,66 @@ export const brands = [
   },
 ];
 
-export const createDates=[
+export const createDates = [
   {
-    id:"2023",
-    title:"2023"
+    id: "2023",
+    title: "2023",
   },
   {
-    id:"2022",
-    title:"2022"
+    id: "2022",
+    title: "2022",
   },
   {
-    id:"2021",
-    title:"2021"
+    id: "2021",
+    title: "2021",
   },
-]
+];
 
-export const imgsShop=[
+export const imgsShop = [
   {
     id: "samsungs23ultra",
     icon: BannerShopPage1,
     title: "Samsung S23 Ultra",
-    description: "Elegancia y calidad en un celular"
+    description: "Elegancia y calidad en un celular",
   },
   {
     id: "iphone14promax",
     icon: BannerShopPage2,
     title: "Iphone 14 pro max",
-    description: "Tope de gama en cámaras"
+    description: "Tope de gama en cámaras",
   },
   {
     id: "lgvelvet5g",
     icon: BannerShopPage3,
     title: "LG Velvet 5g",
-    description: "Buscas rápidez? acá la tienes."
+    description: "Buscas rápidez? acá la tienes.",
   },
-]
+];
+
+export const sidebarMenu = [
+  {
+    id: "dashboard",
+    title: "Dashboard",
+    icon: DashboardIcon,
+  },
+  {
+    id: "products",
+    title: "Productos",
+    icon: ProductsIcon,
+  },
+  {
+    id: "orders",
+    title: "Pedidos",
+    icon: OrdersIcon,
+  },
+  {
+    id: "customers",
+    title: "Clientes",
+    icon: CustomersIcon,
+  },
+  {
+    id: "reports",
+    title: "Reportes",
+    icon: ReportsIcon,
+  },
+];

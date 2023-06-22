@@ -15,7 +15,7 @@ function ShopPageBody() {
   const [currentPage, setCurrentPage] = useState(1);
   const [currentItems, setCurrentItems] = useState([]);
   const [totalPages, setTotalPages] = useState(0);
-  const itemsPerPage = 3;
+  const itemsPerPage = 4;
   const [itemOffset, setItemOffset] = useState(currentPage * itemsPerPage);
   const [products, setProducts] = useState([]);
 

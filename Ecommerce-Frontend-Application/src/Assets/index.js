@@ -32,6 +32,14 @@ import CloseProductcard from "../Assets/CloseProductcard.svg";
 import ShopCart from "../Assets/ShopCart.svg";
 import Check from "../Assets/Check.svg";
 import CreditCards from "../Assets/CreditCards.svg";
+import DashboardIcon from '../Assets/DashboardIcon.svg'
+import ProductsIcon from '../Assets/ProductsIcon.svg'
+import OrdersIcon from '../Assets/OrdersIcon.svg'
+import CustomersIcon from '../Assets/CustomersIcon.svg'
+import ReportsIcon from '../Assets/ReportsIcon.svg'
+import CloseSession from '../Assets/CloseSession.svg'
+import Edit from '../Assets/Edit.svg'
+import Delete from '../Assets/Delete.svg'
 export {
   IconoCarritoCompras,
   IconoLupa,
@@ -67,4 +75,12 @@ export {
   ShopCart,
   Check,
   CreditCards,
+  DashboardIcon,
+  ProductsIcon,
+  OrdersIcon,
+  CustomersIcon,
+  ReportsIcon,
+  CloseSession,
+  Delete,
+  Edit,
 };

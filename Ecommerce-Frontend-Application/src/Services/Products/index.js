@@ -1,3 +1,5 @@
 import GetProducts from './GetProducts'
-
-export {GetProducts,};
+import ImgUpload from './ImgUpload'
+import AddProduct from './AddProduct'
+import DeleteProduct from './DeleteProduct'
+export {GetProducts,ImgUpload,AddProduct,DeleteProduct};

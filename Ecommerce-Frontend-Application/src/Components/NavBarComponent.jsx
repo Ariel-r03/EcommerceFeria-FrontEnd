@@ -1,16 +1,22 @@
 import React, { useState, useContext } from "react";
 import { Logo, Menu, Close } from "../Assets";
 import { NavLinks, icons } from "../Constants";
-import { useNavigate } from "react-router-dom";
+import { useNavigation } from "../CustomHooks/useNavigation";
 import AuthContext from "../Contexts/Authentication/AuthProvider";
 function NavBarComponent({ prop }) {
   const [userDiv, setUserDiv] = useState(false);
   const [userInfo, setUserInfo] = useState(false);
   const [toggle, setToggle] = useState(false);
-  const navigate = useNavigate();
   const { auth } = useContext(AuthContext);
-  console.log(Object.keys(auth).length);
+  const { nav, routesTitles } = useNavigation();
 
+  const handleClickNav = (id) => {
+    const TIENDA = "tienda";
+    console.log(id);
+    if (id == TIENDA) {
+      nav(routesTitles.TIENDA);
+    }
+  };
   return (
     <section className="sm:w-[80%] sm:flex flex-col sm:px-[4rem]">
       <nav className="w-[100%] h-[5rem] flex flex-row">
@@ -20,7 +26,7 @@ function NavBarComponent({ prop }) {
               className="ml-2 w-[150px] sm:w-[170px] h-[60px] hover:cursor-pointer"
               src={Logo}
               alt="LogoEmpresa"
-              onClick={() => navigate("/")}
+              onClick={() => nav(routesTitles.HOMEPAGE)}
             />
           </div>
 
@@ -29,11 +35,7 @@ function NavBarComponent({ prop }) {
               <li
                 key={link.id}
                 className="text-[16px] mx-3 hover:cursor-pointer hover:text-slate-400"
-                onClick={() => {
-                  if (link.id == "tienda") {
-                    navigate("/tienda");
-                  }
-                }}
+                onClick={() => handleClickNav(link.id)}
               >
                 {link.title}
               </li>
@@ -49,14 +51,13 @@ function NavBarComponent({ prop }) {
               key={icon.id}
               onClick={() => {
                 if (icon.id === "usuario") {
-                  if( Object.keys(auth).length == 0){
+                  if (Object.keys(auth).length == 0) {
                     setUserDiv(!userDiv);
-                  }else if(Object.keys(auth).length > 0){
+                  } else if (Object.keys(auth).length > 0) {
                     setUserInfo(!userInfo);
                   }
-                  
-                }else if(icon.id == "carritoCompras"){
-                  navigate("/misProductos");
+                } else if (icon.id == "carritoCompras") {
+                  nav(routesTitles.MISPRODUCTOS);
                 }
               }}
               className="mx-3 w-[28px] sm:w-[28px] h-[28px] hover:cursor-pointer"
@@ -70,7 +71,7 @@ function NavBarComponent({ prop }) {
             <div className="w-[170px] h-[35px] sm:w-[250px] sm:h-[50px] flex justify-center items-center">
               <span
                 onClick={() => {
-                  navigate("/login");
+                  nav(routesTitles.LOGIN);
                 }}
                 className="text-[12px] sm:text-[15px] hover:cursor-pointer hover:text-slate-400"
               >
@@ -83,11 +84,16 @@ function NavBarComponent({ prop }) {
             <div className="w-[150px] sm:w-[250px] sm:h-[50px] flex justify-center items-center ">
               <ul>
                 <li>{auth.user.username}</li>
-                <li onClick={()=>{
-                  alert("Tu sesión ha finalizado");
-                  localStorage.clear();
-                  window.location.reload();
-                }} className="hover:cursor-pointer hover:text-slate-400">Cerrar sesión</li>
+                <li
+                  onClick={() => {
+                    alert("Tu sesión ha finalizado");
+                    localStorage.clear();
+                    window.location.reload();
+                  }}
+                  className="hover:cursor-pointer hover:text-slate-400"
+                >
+                  Cerrar sesión
+                </li>
               </ul>
             </div>
           )}
@@ -112,11 +118,7 @@ function NavBarComponent({ prop }) {
               <li
                 key={link.id}
                 className="text-[16px] mx-3 my-1 hover:cursor-pointer hover:text-slate-400"
-                onClick={() => {
-                  if (link.id == "tienda") {
-                    navigate("/tienda");
-                  }
-                }}
+                onClick={() => handleClickNav(link.id)}
               >
                 {link.title}
               </li>

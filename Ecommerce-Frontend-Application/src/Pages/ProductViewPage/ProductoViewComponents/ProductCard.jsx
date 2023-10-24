@@ -1,32 +1,33 @@
 import React, { useState, useEffect, useContext } from "react";
 import axios from "axios";
-//import { products } from "../../../Constants";
+import { products } from "../../../Constants";
 import ShoppingCartContext from "../../../Contexts/ShoppingCart/ShoppingCartProvider";
 function ProductCard() {
   const [productId, setProductId] = useState(null);
   const [quantity, setQuantity] = useState(1);
   const [product, setProduct] = useState({});
   const { addProduct, cartProducts } = useContext(ShoppingCartContext);
-  /*const searchProduct = (id) => {
+  const searchProduct = (id) => {
     products.map((product) => {
       if (product.id == id) {
         console.log(product.title);
         setProduct(product);
       }
     });
-  };*/
-  const showProduct = (id) => {
+  };
+  /*const showProduct = (id) => {
     axios
       .get(`http://ec2-54-226-200-205.compute-1.amazonaws.com/v1/product/${id}`)
       .then((res) => {
         console.log(res.data);
         setProduct(res.data);
       });
-  };
+  };*/
   useEffect(() => {
     const path = window.location.pathname.split("/");
     setProductId(path[3]);
-    showProduct(path[3]);
+    searchProduct(path[3]);
+    //showProduct(path[3]);
   }, []);
 
   const addToCart = () => {

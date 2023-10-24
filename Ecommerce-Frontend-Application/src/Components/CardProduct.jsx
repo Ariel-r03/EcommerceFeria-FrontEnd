@@ -14,7 +14,7 @@ function CardProduct({props}) {
         <p className='my-[1rem] text-[#997032] font-semibold'>${props.price}</p>
         <div className='flex flex-row mb-[1rem] justify-end items-center'>
             <span className='mx-[0.5rem] text-[#0465D8] text-[13px] hover:cursor-pointer'>Agregar</span>
-            <img onClick={()=>{navigate(`product-view/${props._id}`)}} className='mr-[1rem] hover:cursor-pointer' src={IconAddProduct} alt="" />
+            <img onClick={()=>{navigate(`product-view/${props.id}`)}} className='mr-[1rem] hover:cursor-pointer' src={IconAddProduct} alt="" />
         </div>
       </div>
 

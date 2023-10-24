@@ -1,5 +1,5 @@
 import React, { useState, useContext, useEffect } from "react";
-//import { products } from "../../../Constants";
+import { products } from "../../../Constants";
 import axios from "axios";
 import { CardProduct } from "../../../Components";
 import { FilterShopComponent } from "../ShopPageComponents";
@@ -17,7 +17,7 @@ function ShopPageBody() {
   const [totalPages, setTotalPages] = useState(0);
   const itemsPerPage = 4;
   const [itemOffset, setItemOffset] = useState(currentPage * itemsPerPage);
-  const [products, setProducts] = useState([]);
+  //const [products, setProducts] = useState([]);
 
   const customStyles = {
     content: {
